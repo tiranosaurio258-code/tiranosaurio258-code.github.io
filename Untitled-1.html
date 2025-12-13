@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi sitio informativo personal</title>
+
+  <style>
+    /* =====================
+       DISEÑO CREATIVO – MOBILE FIRST
+       Colores: Morado, Negro y Azul
+    ===================== */
+
+    :root {
+      --morado: #7b2cbf;
+      --azul: #3a86ff;
+      --negro: #0b0b0b;
+      --gris: #f2f2f2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://33.media.tumblr.com/dc7e1526bcf83a69d3f2e2deac1d27b0/tumblr_mussk5EFx21qdw2l3o5_400.gif') center / cover fixed no-repeat;
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    /* =====================
+       HEADER Y NAVEGACIÓN
+    ===================== */
+
+    header {
+      position: relative;
+      background: linear-gradient(90deg, rgba(123,44,191,0.9), rgba(58,134,255,0.9));
+      padding: 1.5rem;
+    }
+
+    nav h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px white;
+    }
+
+    /* ICONO SUPERIOR DERECHO */
+    .icono-superior {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      width: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .icono-superior:hover {
+      transform: scale(1.3);
+    }
+
+    /* =====================
+       CONTENIDO PRINCIPAL
+    ===================== */
+
+    main {
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(6px);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(122, 44, 191, 0.4);
+    }
+
+    section h2 {
+      color: var(--azul);
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    article h3 {
+      color: var(--morado);
+      margin: 1rem 0 0.5rem;
+    }
+
+    /* =====================
+       FORMULARIO
+    ===================== */
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      padding: 0.7rem;
+      border-radius: 10px;
+      border: none;
+    }
+
+    button {
+      background: linear-gradient(90deg, var(--morado), var(--azul));
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--azul);
+    }
+
+    /* =====================
+       FOOTER
+    ===================== */
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.9);
+      font-size: 0.9rem;
+    }
+
+    /* =====================
+       TABLET
+    ===================== */
+
+    @media (min-width: 768px) {
+      main {
+        padding: 3rem;
+      }
+
+      section {
+        padding: 2.5rem;
+      }
+    }
+
+    /* =====================
+       ESCRITORIO
+    ===================== */
+
+    @media (min-width: 1024px) {
+      main {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      #datos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <nav>
+      <h1>Mi sitio informativo personal</h1>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#datos">Datos personales</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <img src="https://cdn-icons-png.flaticon.com/512/7682/7682981.png" alt="Icono creativo" class="icono-superior">
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+      <p>
+        Hola, soy <strong>Oscar Ariel Perez Lienzo</strong>, estudiante de la carrera de
+        <strong>Diseño y Comunicación Gráfica</strong>. Me enfoco en crear diseños llamativos,
+        emocionales y con identidad visual fuerte.
+      </p>
+    </section>
+
+    <section id="datos">
+      <article>
+        <h2>Perfil</h2>
+        <p><strong>Nombre:</strong> Oscar Ariel Perez Lienzo</p>
+        <p><strong>Carrera:</strong> Diseño y Comunicación Gráfica</p>
+        <p>
+          Me gusta trabajar con colores intensos, conceptos visuales claros y diseño
+          que comunique personalidad y emoción.
+        </p>
+      </article>
+
+      <article>
+        <h2>Pasiones</h2>
+        <p>
+          El <strong>gym</strong> es una parte esencial de mi vida. Entreno con disciplina y constancia,
+          valores que aplico también en el diseño, buscando siempre superarme física y creativamente.
+        </p>
+      </article>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" value="camaro2014vistahermosa@hotmail.com" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="5">Hola, me gustaría conocer más sobre tu trabajo.</textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 · Oscar Ariel Perez Lienzo · Diseño y Comunicación Gráfica</p>
+  </footer>
+
+</body>
+</html>
